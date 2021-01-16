@@ -15,7 +15,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // ********
 
 let urlBD;
-
+console.log('env', process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'dev') {
     urlBD = 'mongodb://localhost:27017/cafe'
 } else {
