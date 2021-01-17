@@ -15,11 +15,11 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // ********
 
 let urlBD;
-console.log('env', process.env.NODE_ENV)
+
 if (process.env.NODE_ENV === 'dev') {
     urlBD = 'mongodb://localhost:27017/cafe'
 } else {
-    urlBD = 'mongodb://ninfan:MEreDIthGRey12_@cluster0-shard-00-00.brxyf.mongodb.net:27017,cluster0-shard-00-01.brxyf.mongodb.net:27017,cluster0-shard-00-02.brxyf.mongodb.net:27017/cafe?replicaSet=atlas-b8vxba-shard-0&ssl=true&authSource=admin'
+    urlBD = `${process.env.MONGO_URI}&ssl=true&authSource=admin`;
 }
 
 
